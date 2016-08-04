@@ -1,8 +1,5 @@
 # Built application files
-/*/build/
-
-# Crashlytics configuations
-com_crashlytics_export_strings.xml
+build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -13,18 +10,8 @@ local.properties
 # Signing files
 .signing/
 
-# User-specific configurations
-.idea/libraries/
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/.name
-.idea/compiler.xml
-.idea/copyright/profiles_settings.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
-.idea/vcs.xml
+# Android Studio files:
+.idea/
 *.iml
 
 # OS-specific files
