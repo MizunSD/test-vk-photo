@@ -1,15 +1,16 @@
 package ru.teaz.testvkphoto.domain.loader;
 
+import android.content.Context;
+
 import com.vk.sdk.api.VKError;
 import com.vk.sdk.api.model.VKPhotoArray;
 
 public interface PhotoDataLoader {
 
-    void loadPhotoData();
+    void loadPhotoData(Context context);
 
     interface LoadCallback {
 
-        void setPhotoCount(int count);
         void onComplete(VKPhotoArray photos);
         void onError(VKError error);
     }

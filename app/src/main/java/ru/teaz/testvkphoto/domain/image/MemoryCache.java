@@ -3,8 +3,6 @@ package ru.teaz.testvkphoto.domain.image;
 import android.graphics.Bitmap;
 import android.util.LruCache;
 
-import ru.teaz.testvkphoto.utils.Logger;
-
 public class MemoryCache {
 
     private static volatile MemoryCache instance;
@@ -32,9 +30,10 @@ public class MemoryCache {
     }
 
     public void addBitmapToCache(String key, Bitmap value) {
-        if (getBitmapFromCache(key) == null) {
-            mCache.put(key, value);
-            Logger.d(key + " saved on memory cache");
+        synchronized (mCache) {
+            if (getBitmapFromCache(key) == null) {
+                mCache.put(key, value);
+            }
         }
     }
 

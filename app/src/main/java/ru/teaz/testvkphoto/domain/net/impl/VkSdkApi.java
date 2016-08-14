@@ -3,8 +3,6 @@ package ru.teaz.testvkphoto.domain.net.impl;
 import android.app.Activity;
 
 import com.vk.sdk.VKSdk;
-import com.vk.sdk.api.VKApi;
-import com.vk.sdk.api.VKApiConst;
 import com.vk.sdk.api.VKParameters;
 import com.vk.sdk.api.VKRequest;
 

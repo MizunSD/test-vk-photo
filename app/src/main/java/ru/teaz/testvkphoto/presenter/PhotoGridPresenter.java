@@ -1,6 +1,8 @@
 package ru.teaz.testvkphoto.presenter;
 
+import android.content.Context;
+
 public interface PhotoGridPresenter extends MvpPresenter {
 
-    void loadPhotos();
+    void loadPhotos(Context context);
 }

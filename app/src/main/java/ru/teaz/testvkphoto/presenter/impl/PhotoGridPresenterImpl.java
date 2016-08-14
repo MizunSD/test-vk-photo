@@ -1,5 +1,7 @@
 package ru.teaz.testvkphoto.presenter.impl;
 
+import android.content.Context;
+
 import com.vk.sdk.api.VKError;
 import com.vk.sdk.api.model.VKPhotoArray;
 
@@ -25,13 +27,12 @@ public class PhotoGridPresenterImpl implements PhotoGridPresenter, PhotoDataLoad
     }
 
     @Override
-    public void loadPhotos() {
-        mPhotoDataLoader.loadPhotoData();
+    public void loadPhotos(Context context) {
+        mPhotoDataLoader.loadPhotoData(context);
     }
 
     @Override
     public void onComplete(VKPhotoArray photos) {
-        Logger.d("loadPhotoData completed: " + photos.size());
         mView.setVkPhotoArray(photos);
     }
 
@@ -40,8 +41,4 @@ public class PhotoGridPresenterImpl implements PhotoGridPresenter, PhotoDataLoad
         Logger.e("loadPhotoData error: " + error.errorMessage);
     }
 
-    @Override
-    public void setPhotoCount(int count) {
-        mView.setPhotoCount(count);
-    }
 }
